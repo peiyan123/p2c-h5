@@ -1,0 +1,218 @@
+@import url('../../global.less');
+
+.bottomBox {
+  position: absolute;
+  background: #fff;
+  height: 60px;
+  width: 100%;
+  //top: 89%;
+}
+
+.bottom {
+  width: calc(100% - 20px);
+  height: 42px;
+  line-height: 42px;
+  //position: absolute;
+  //left: 10px;
+  //bottom: 10px;
+  //top: 89%;
+  background: @--adm-color-gray;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.divider {
+  border-color: @--adm-color-deepGray;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0 15px;
+}
+
+.dividerLast {
+  border-color: @--adm-color-deepGray;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0 15px 15px;
+}
+
+.reject {
+  color: red;
+  display: flex;
+  align-items: center;
+}
+
+.visitor {
+  height: 100%;
+  overflow: auto;
+
+  .list {
+    padding: 15px;
+    border-radius: 4px;
+    background-color: @--adm-color-gray;
+
+    .type {
+      //padding-bottom: 10px;
+      font-weight: bold;
+      line-height: 23px;
+      .tip {
+        font-weight: 400;
+        margin-left: 10px;
+      }
+    }
+
+    .box {
+      text-align: center;
+      flex-wrap: wrap;
+      border-radius: 15px;
+      margin-top: 7px;
+
+      &.blacklist {
+        width: 100%;
+        position: relative;
+        display: flex;
+        background-color: #ffffff;
+        border-radius: 15px;
+        height: 45px;
+        line-height: 45px;
+        justify-content: space-between;
+        padding-right: 20px;
+
+        .rejectWord {
+          color: @--adm-color-red;
+          margin: auto 0;
+        }
+
+        .rejectIcon {
+          width: 30px;
+          height: 30px;
+          background: url('../../assets/images/visitor/ic_block.png') no-repeat;
+          background-size: contain;
+          margin: auto 10px;
+          display: block;
+        }
+
+        .goBlacklist {
+          color: @--adm-color-deepGray;
+        }
+      }
+
+      .item {
+        position: relative;
+        margin-right: 6px;
+        margin-bottom: 6px;
+        display: flex;
+        padding: 6.5px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        width: 78px;
+        height: 78px;
+
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+
+        .newIcon {
+          width: 22px;
+          height: 22px;
+          right: 6px;
+          bottom: 6px;
+        }
+
+        &.auto {
+          &::after {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            width: 24px;
+            height: 24px;
+            background: url(../../assets/images/timeline/auto.png);
+            background-size: contain;
+          }
+        }
+      }
+    }
+
+    .icon {
+      width: 100%;
+      border-radius: 50%;
+      border: 4px solid;
+      padding: 3px;
+    }
+
+    .right {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      height: 20px;
+    }
+  }
+
+  // .refuseIcon {
+  //   width: 30px;
+  //   height: 30px;
+  //   background: #000;
+  //   display: inline-block;
+  //   vertical-align: middle;
+  //   margin-right: 6px;
+  // }
+}
+
+.cellIcon {
+  width: 23px;
+  height: auto;
+}
+
+.mt15 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.add {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  right: 6.5px;
+  bottom: 6.5px;
+}
+
+.itemExtra {
+  position: absolute;
+  top: 0;
+  left: 85px;
+  height: 100%;
+  word-break: keep-all;
+  word-wrap: normal;
+  display: flex;
+  align-items: center;
+}
+
+.extraDesc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #53595c;
+}
+
+.extraGuide {
+  flex: 1;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  color: #53595c;
+
+  & > div {
+    flex: 1;
+  }
+
+  & > svg {
+    margin: 0 10px;
+  }
+}

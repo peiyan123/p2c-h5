@@ -1,0 +1,144 @@
+@import url('../../../global.less');
+
+.resItemBg {
+  background: #2d5293 !important;
+  color: #fff !important;
+  border-radius: 0 !important;
+  position: relative;
+  border: none !important;
+
+  &:not(:last-child) {
+    &::after {
+      height: 0 !important;
+    }
+  }
+
+  :before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -13px;
+    left: -7px;
+    margin-left: 50%;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #2f5597 transparent transparent transparent;
+  }
+}
+
+.resItem {
+  position: relative;
+  height: 66px;
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  padding: 10px 0;
+
+  &.active {
+    background: rgb(180, 199, 231);
+    color: #000;
+    border-radius: @--adm-radius;
+  }
+
+  span {
+    margin-left: 16px;
+    padding-right: 16px;
+  }
+
+  :global(.adm-ellipsis) {
+    margin-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.resItem:first-child {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.resItem:last-child {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.resItem:not(:last-child) {
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #e5e6e8;
+    content: '';
+  }
+}
+
+.refuseContent {
+  border-radius: 19px;
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+.loadingPart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+
+  img {
+    width: 45px;
+    height: auto;
+    max-height: 45px;
+    margin: 0 10px;
+  }
+}
+
+.reminder {
+  z-index: 1000;
+  position: fixed;
+  top: calc(env(safe-area-inset-top) + 40px);
+  left: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+
+.houseIcon {
+  width: 14px;
+  height: auto;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.info {
+  flex: 1;
+  padding-left: 4%;
+  box-sizing: border-box;
+
+  .desc {
+    color: #191919;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    line-height: 18px;
+  }
+
+  .types {
+    color: #4ea2e0;
+    font-size: 12px;
+    margin-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nickName {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    word-break: break-all;
+  }
+}

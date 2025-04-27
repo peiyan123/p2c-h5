@@ -1,0 +1,50 @@
+@import url('../../global.less');
+.popupHeader {
+  width: 100%;
+  height: 50px;
+  // background: @--adm-color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+}
+.popupContent {
+  height: calc(95vh - 50px);
+  overflow: auto;
+  .content {
+    padding: 20px;
+  }
+  .iframe {
+    width: 100%;
+    height: calc(90vh - 10px);
+    overflow: auto;
+  }
+}
+.font16 {
+  font-size: 14px;
+}
+
+.basePopup {
+  :global(.adm-popup-body) {
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+  }
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.close {
+  font-size: 13px;
+  line-height: 20px;
+  position: relative;
+  &:before {
+    position: absolute;
+    top: -3px;
+    left: -6.5px;
+    width: 26px;
+    height: 26px;
+    content: '';
+  }
+}

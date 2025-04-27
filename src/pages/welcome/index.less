@@ -1,0 +1,109 @@
+@import url('../../global.less');
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  background: url('../../assets/images/welcome/welcome_bg.png') no-repeat;
+  // background-color: @--adm-color-primary;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+
+  .dooropen {
+    width: 128px;
+    height: 128px;
+    background: url('../../assets/images/login/brainmon_welcome.png') no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 72px;
+    right: 30px;
+  }
+
+  .popup {
+    font-size: 13px;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0 20px;
+    text-align: left;
+  }
+
+  .title {
+    font-size: 44px;
+    color: #fff;
+    padding-bottom: 20px;
+    text-align: left;
+  }
+
+  .info {
+    padding-bottom: 20px;
+  }
+
+  .border {
+    // border-top: 2px solid #5b78ac;
+    // margin-bottom: 20px;
+    width: 100%;
+    height: 2px;
+    background-color: #5b78ac;
+  }
+
+  .terms {
+    margin: 20px 10px;
+    font-size: 12px;
+
+    .link {
+      text-decoration: underline;
+
+      img {
+        margin: 4px 0 0 4px;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+
+  .button {
+    height: 63px;
+    margin: 20px 0 30px;
+    color: @--adm-color-primary;
+    background-color: #fff;
+    font-size: 16px;
+  }
+
+  .text-white {
+    color: #fff;
+  }
+
+  .adm-button-block {
+    opacity: 0.8 !important;
+  }
+
+  .border-primary {
+    border-color: @--adm-color-primary;
+  }
+}
+
+.animation {
+  background: url('../../assets/images/welcome/animation_bg.png');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 24px;
+}
+
+.checkbox {
+  --icon-size: 27px;
+  --font-size: 16px;
+  --gap: 14px;
+  margin-top: 20px;
+
+  :global(.adm-checkbox-icon) {
+    border-radius: 6px !important;
+    border-color: #fff !important;
+  }
+}

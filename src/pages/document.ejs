@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- <meta charset="UTF-8"> -->
+  <meta charset="iso8859-1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+  <!--  缓存配置   -->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <!-- 允许全屏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <!-- 顶端状态条样式 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <!-- 忽略将数字变为电话号码 -->
+  <meta content="telephone=no" name="format-detection">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- qq强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <!-- uc强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <!-- qq强制全屏 -->
+  <meta name="x5-fullscreen" content="true">
+  <!-- uc应用模式 -->
+  <meta name="browsermode" content="application">
+  <!-- qq应用模式 -->
+  <meta name="x5-page-mode" content="app">
+  <!-- windows phone 点击无高光 -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>Document</title>
+  <script>
+    function connectWebViewJavascriptBridge(callback) {
+      if (window.WebViewJavascriptBridge) {
+        callback(WebViewJavascriptBridge)
+      } else {
+        document.addEventListener(
+          'WebViewJavascriptBridgeReady'
+          , function () {
+            callback(WebViewJavascriptBridge)
+          },
+          false
+        );
+      }
+    }
+
+    //注册回调函数，第一次连接时调用 初始化函数
+    connectWebViewJavascriptBridge(function (bridge) {
+      //初始化
+      bridge.init(function (message, responseCallback) {
+        var data = {
+          'Javascript Responds': 'Wee!'
+        };
+        // alert(message);
+        responseCallback(data);
+      });
+      window.bridge = bridge;
+      // Android调用js方法：functionInJs方法名称需要保持一致 ，并返回给Android通知
+      bridge.registerHandler("native_call_js", function (data, responseCallback) {
+        // alert(data);
+        var responseData = "我是Android调用js方法返回的数据---";
+        responseCallback(responseData);
+      });
+    })
+    window.addEventListener('focusout', function () {
+      window.scrollTo(0, 0)
+    })
+
+    function setRem() {
+      // 实际设备页面宽度和设计稿的比值
+      let scale = document.documentElement.clientWidth / 375;
+
+      // 计算实际的rem值并赋予给html的font-size
+      document.documentElement.style.fontSize = (16 * Math.min(scale, 1.5)) + 'px';
+    }
+
+    setRem();
+    window.addEventListener('resize', () => {
+      setRem();
+    });
+
+    // input输入框弹起软键盘的解决方案。
+    // var bfscrolltop = document.body.scrollTop;
+    // $('input')
+    //   .focus(function() {
+    //     document.body.scrollTop = document.body.scrollHeight;
+    //   })
+    //   .blur(function() {
+    //     document.body.scrollTop = bfscrolltop;
+    //   })
+    // $('textarea')
+    //   .focus(function() {
+    //     document.body.scrollTop = document.body.scrollHeight;
+    //   })
+    //   .blur(function() {
+    //     document.body.scrollTop = bfscrolltop;
+    //   })
+  </script>
+</head>
+<body>
+<div id="root"></div>
+</body>
+</html>

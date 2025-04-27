@@ -1,0 +1,57 @@
+@import url('../../global.less');
+.page {
+  width: 100vw;
+  height: 100vh;
+  background: url('../../assets/images/welcome/welcome_bg.png') no-repeat;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  .backIcon {
+    position: absolute;
+    top: 58px;
+    left: 20px;
+
+    img {
+      height: 15px;
+      width: 8.5px;
+    }
+  }
+  .textWrapper {
+    position: absolute;
+    top: 78px;
+    h1 {
+      margin: 0 30px;
+      font-size: 31px;
+      color: #fff;
+    }
+    p {
+      margin: 30px 25px 0;
+      font-size: 14px;
+    }
+  }
+  .dooropen {
+    position: absolute;
+    top: 280px;
+    left: -16px;
+    width: 360px;
+    height: 280px;
+    background: url('../../assets/images/microAuth/localnet_ios_16.png')
+      no-repeat;
+    background-size: cover;
+  }
+  .popup {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0 20px;
+    text-align: left;
+  }
+  .button {
+    margin: 20px 0 30px;
+    color: @--adm-color-primary;
+    background-color: #fff;
+  }
+}

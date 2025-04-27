@@ -1,0 +1,127 @@
+.visitor {
+  margin-top: 10px;
+}
+
+.other {
+  margin: 15px;
+
+  li {
+    line-height: 40px;
+    padding: 0 20px;
+  }
+
+  .statute {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url(../../assets/images//other/file.png);
+    background-size: contain;
+    vertical-align: sub;
+  }
+
+  .logout {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url(../../assets/images//other/delete.png);
+    background-size: contain;
+    vertical-align: sub;
+  }
+
+  .bgwhite {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 0 15px;
+
+    .flexsb {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      line-height: 50px;
+
+      .lineTwo {
+        display: flex;
+        flex-direction: column;
+        line-height: 16px;
+        height: 60px;
+        padding-top: 15px;
+      }
+    }
+
+    .settingIcon {
+      width: 23px;
+      height: 23px;
+      margin-right: 10px;
+    }
+
+    .avatarIcon {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      border: 2px solid orange;
+    }
+  }
+}
+
+.headerWrapper {
+  position: relative;
+  display: flex;
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: -105px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url('../../assets/images/other/close.png');
+    background-size: contain;
+  }
+}
+
+.dialogTitle {
+  padding: 0 8px;
+  font-size: 16px;
+  color: #e56757;
+}
+
+.dialogContent {
+  font-size: 10px;
+  color: #53595c;
+
+  p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.link {
+  text-decoration: underline;
+  color: #4ea2e0;
+
+  & > .withIcon {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    margin: 4px 0 0 4px;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.termsCell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  .link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,83 @@
+@import url('../../../global.less');
+.message {
+  font-size: 12px;
+  .content {
+    padding: 10px;
+    padding-top: 20px;
+    .name {
+      display: flex;
+      align-items: center;
+      span {
+        margin-left: 8px;
+      }
+    }
+    .name:not(:nth-of-type(1)) {
+      margin-top: 20px;
+    }
+    .title {
+      color: #919191;
+    }
+  }
+  .autoAnswer {
+    margin-top: 10px;
+    font-size: 13px;
+    li {
+      position: relative;
+      height: 66px;
+      align-items: center;
+      background-color: #ffffff;
+      &.active {
+        background: rgb(180, 199, 231);
+        color: #000;
+        border-radius: @--adm-radius;
+      }
+      span {
+        margin-left: 16px;
+        padding-right: 16px;
+      }
+      :global(.adm-ellipsis) {
+        margin-left: 16px;
+        padding-right: 16px;
+      }
+    }
+    li:first-child {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+    li:last-child {
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+    li:not(:last-child) {
+      &::after {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: calc(100% - 32.5px);
+        height: 1px;
+        background-color: #e5e6e8;
+        content: '';
+      }
+    }
+  }
+  .autoIcon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url('../../../assets/images/other/auto_green.png');
+    background-size: contain;
+    vertical-align: middle;
+  }
+  .refuse {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url('../../../assets/images/timeline/reject_new.png');
+    background-size: contain;
+    vertical-align: middle;
+  }
+}
+.loading {
+  width: 100%;
+  --size: 24px;
+}

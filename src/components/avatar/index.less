@@ -1,0 +1,211 @@
+@import url('../../common.less');
+
+.avatarContainer {
+  position: relative;
+}
+
+.size {
+  width: 28.75%;
+  height: 28.75%;
+  min-width: 23px;
+  min-height: 23px;
+}
+
+.newIcon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  .size();
+  background: url('../../assets/images/user/badge_new.png') no-repeat;
+  background-size: contain;
+}
+
+.responseIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  .size();
+  background: url('../../assets/images/visitor/badge_auto_response.png')
+    no-repeat;
+  background-size: contain;
+}
+
+.blockIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  .size();
+  background: url('../../assets/images/visitor/badge_block.png') no-repeat;
+  background-size: contain;
+  z-index: 100;
+}
+
+.abnormal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  .size();
+  background: url('../../assets/images/user/abnormal.png') no-repeat;
+  background-size: contain;
+}
+
+.normal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  .size();
+  background: url('../../assets/images/user/normal.png') no-repeat;
+  background-size: contain;
+}
+
+.avatar {
+  // width: 80px;
+  // height: 80px;
+  position: relative;
+  border-radius: 50%;
+  border: 4px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  box-sizing: border-box;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+
+  .checkIcon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    .size();
+
+    &.icon_green {
+      background: url('../../assets/images/user/badge_registered_blue.png')
+        no-repeat;
+      background-size: contain;
+    }
+
+    &.icon_blue {
+      background: url('../../assets/images/user/badge_registered_blue.png')
+        no-repeat;
+      background-size: contain;
+    }
+
+    &.icon_gray {
+      background: url('../../assets/images/user/badge_registered_gray.png')
+        no-repeat;
+      background-size: contain;
+    }
+
+    &.icon_orange {
+      background: url('../../assets/images/user/badge_registered_orange.png')
+        no-repeat;
+      background-size: contain;
+    }
+
+    &.icon_red {
+      background: url('../../assets/images/user/badge_block.png') no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.bg-primary {
+  color: #fff !important;
+  background-color: @--adm-color-primary !important;
+}
+
+.bg-gray {
+  color: #fff !important;
+  background-color: #b0b2b9 !important;
+  border-right: none !important;
+}
+
+.bg-red {
+  color: #fff !important;
+  background-color: #f55c4f !important;
+}
+
+.bd-gray {
+  border-color: #e2e4ec !important;
+}
+
+.bd-primary {
+  border-color: @--adm-color-primary !important;
+}
+
+.bg-red {
+  background-color: @--adm-color-red !important;
+}
+
+.bd-red {
+  border-color: @--adm-color-red !important;
+}
+
+.bg-orange {
+  background-color: @--adm-color-orange !important;
+}
+
+.bg-light-orange {
+  background-color: @--adm-color-light-orange !important;
+}
+
+.bd-orange {
+  border-color: @--adm-color-orange !important;
+}
+
+.bd-light-orange {
+  border-color: @--adm-color-light-orange !important;
+}
+
+.bg-purple {
+  background-color: @--adm-color-purple;
+}
+
+.bd-purple {
+  border-color: @--adm-color-purple !important;
+}
+
+.bg-green {
+  background-color: @--adm-color-green;
+}
+
+.bd-green {
+  border-color: @--adm-color-green !important;
+}
+
+.bg-pink {
+  background-color: @--adm-color-pink;
+}
+
+.bd-pink {
+  border-color: @--adm-color-pink !important;
+}
+
+.bg-blue {
+  background-color: @--adm-color-blue;
+}
+
+.bd-blue {
+  border-color: @--adm-color-blue !important;
+}
+
+.bd-white {
+  border-color: #fff !important;
+}
+
+.reg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 27.5%;
+  height: 27.5%;
+  min-width: 22px;
+  min-height: 22px;
+  background: url('../../assets/images/registered.png') no-repeat;
+  background-size: contain;
+}

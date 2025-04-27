@@ -1,0 +1,29 @@
+.pdfContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.pdfContent {
+  overflow-y: scroll;
+  max-width: 100%;
+  width: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  padding: 15px;
+  z-index: 1000;
+  line-height: initial;
+
+  img {
+    width: 12px;
+    height: 12px;
+  }
+}

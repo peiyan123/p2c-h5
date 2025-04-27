@@ -1,0 +1,7 @@
+.idea
+node_modules
+src
+mock
+config
+public
+dist.7z

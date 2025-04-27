@@ -1,0 +1,144 @@
+@import url('../../global.less');
+
+.subInputBox {
+  flex-direction: column;
+  width: 144px !important;
+}
+
+.subAccountInfo {
+  display: flex;
+}
+
+.subAccountInfo input {
+  margin: 0 0 10px 0;
+  border: 1px solid gray;
+  width: 100%;
+  border-radius: 3px;
+  padding-left: 5px;
+}
+
+.status {
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.buttonBox {
+  width: 100%;
+  line-height: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.subAccountBox {
+  background-color: #fff;
+  display: block;
+  padding: 15px 15px 10px;
+  margin: 15px 15px;
+  border-radius: 10px;
+
+  button {
+    border: 0;
+    border-radius: 12.5px;
+    font-weight: bolder;
+    margin: 0;
+    width: 65px;
+    height: 25px;
+    line-height: 25px;
+    min-width: 70px;
+  }
+
+  input {
+    height: 40px;
+    border-radius: 5px;
+    width: 100%;
+    border-color: #b0b2b9;
+  }
+}
+
+.addBox {
+  border: 1px solid rgb(240, 237, 237);
+}
+
+.rightBox {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 16px;
+  align-items: center;
+  flex: 1;
+}
+
+.subButton {
+  border: 0;
+  border-radius: 10px;
+  font-weight: bolder;
+  margin: 5px;
+  width: 65px;
+  height: 25px;
+  line-height: 25px;
+  min-width: 90px;
+  background-color: @--adm-color-gray;
+  font-size: 12px;
+  padding: 0 10px;
+
+  &.opacityZero {
+    opacity: 0;
+  }
+}
+
+.red {
+  color: #f55c4f;
+  font-size: 12.5px;
+}
+
+.green {
+  color: #14c61b;
+  font-size: 12.5px;
+}
+
+.gray {
+  color: #919191;
+  font-size: 12.5px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.description {
+  font-weight: normal;
+  line-height: 15px;
+  color: #919191;
+}
+
+.tipContent {
+  div {
+    text-align: center;
+    font-size: 14px;
+    color: #f55c4f;
+  }
+}
+
+.desc {
+  font-weight: bold;
+  margin: 15px;
+  font-size: 12.5px;
+}
+
+.divider {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.footerDesc {
+  font-size: 9px;
+  color: #53595c;
+  flex: 1;
+}

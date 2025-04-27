@@ -1,0 +1,125 @@
+@import url('../global.less');
+
+.app {
+  height: 100vh;
+  background: @--adm-color-gray;
+  overflow: hidden;
+}
+
+.appHeader {
+  width: 100%;
+  height: calc(50px + env(safe-area-inset-top));
+  font-size: 20px;
+  font-weight: bolder;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: env(safe-area-inset-top) 15px 0;
+
+  .headericon {
+    width: 187px;
+    height: 36.5px;
+    // display: inline-block;
+    // background-size: contain;
+    margin: 6px 0;
+  }
+}
+
+.pageBody {
+  width: 100%;
+  position: absolute;
+  top: calc(50px + env(safe-area-inset-top));
+  left: 0;
+  bottom: calc(50px + env(safe-area-inset-bottom));
+  height: calc(
+    100vh - 100px - env(safe-area-inset-top) - env(safe-area-inset-bottom)
+  );
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  background-color: @--adm-color-gray;
+  padding-bottom: 10px;
+  z-index: 2;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgb(230, 230, 230);
+  border-top: 1px solid var(--adm-border-color);
+  padding-bottom: env(safe-area-inset-bottom);
+  z-index: 3;
+}
+
+.status {
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  img {
+    width: 48px;
+    height: 40px;
+    object-fit: contain;
+  }
+}
+
+.tipHeader {
+  font-size: 14px;
+  color: #2f5597;
+  font-weight: normal;
+}
+
+.abnormalLine {
+  height: calc(50px + env(safe-area-inset-top));
+  position: relative;
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: ' ';
+    z-index: 1000;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      #f55c4f 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
+
+.normalLine {
+  height: calc(50px + env(safe-area-inset-top));
+  position: relative;
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: ' ';
+    z-index: 1000;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      #50d855 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
+
+.tipContent {
+  font-size: 12px;
+  text-align: center;
+  color: #53595c;
+}

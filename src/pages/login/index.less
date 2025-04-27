@@ -1,0 +1,336 @@
+@import url('../../global.less');
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  // padding: 20px;
+  background: #f3f3f3;
+
+  .header-radius {
+    background: @--adm-color-primary;
+    height: 250px;
+    border-bottom-left-radius: 60% 25%;
+    border-bottom-right-radius: 60% 25%;
+  }
+
+  h1 {
+    font-size: 22px;
+    padding-top: 40px;
+  }
+
+  .steps {
+    padding: 10px 0;
+  }
+
+  .info {
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .phoneInput {
+    width: 298px;
+    left: calc(50% - 149px);
+    position: absolute;
+    text-indent: 40px;
+  }
+
+  .input {
+    height: 38px;
+
+    &:nth-child(1) {
+      width: 80px;
+    }
+
+    &:nth-child(2) {
+      width: 100px;
+    }
+
+    &:nth-child(3) {
+      width: 110px;
+    }
+  }
+
+  .phone {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    position: relative;
+  }
+
+  .codePage {
+    text-align: center;
+    padding-top: 10px;
+
+    p:first-child {
+      margin-bottom: 0;
+    }
+
+    .codeWrapper {
+      display: flex;
+      align-items: center;
+
+      .phoneBlue {
+        width: 14px;
+        height: 20px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .codeErr {
+    :global(.adm-form-item-footer) {
+      color: var(--adm-color-danger);
+      font-size: 11.5px;
+      margin-top: 12px;
+      text-align: left;
+    }
+  }
+
+  .flexsb {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13.5px;
+  }
+
+  .gray {
+    opacity: 0.3;
+  }
+
+  .loginIcon {
+    height: 16px;
+    width: 16px;
+    margin-right: 10px;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .spinner {
+    height: 16px;
+    width: 16px;
+    margin-right: 10px;
+    animation: loading 0.8s linear infinite;
+  }
+
+  .checked {
+    height: auto;
+    width: 18px;
+    margin-right: 10px;
+    object-fit: contain;
+  }
+
+  .backIcon {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+
+    img {
+      height: 15px;
+      width: 8.5px;
+    }
+  }
+
+  .codeInput {
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+
+  .setting {
+    padding: 0 12px 30px;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+
+    .mycard {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .primary {
+      color: @--adm-color-primary;
+    }
+
+    .danger {
+      color: @--adm-color-red;
+    }
+  }
+
+  .link {
+    padding-top: 20px;
+    color: @--adm-color-primary;
+    text-align: center;
+    // text-decoration: underline;
+  }
+
+  .success {
+    width: 98px;
+    height: 98px;
+    background: url('../../assets//images/login/register_success.png') no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .green {
+    font-size: 20px;
+    color: #14c61b;
+  }
+
+  .endFooter {
+    position: absolute;
+    bottom: 70px;
+    width: 90%;
+  }
+
+  :global {
+  }
+}
+
+.popupHeader {
+  width: 100%;
+  height: 50px;
+  background: @--adm-color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+}
+
+.popupContent {
+  padding: 20px;
+}
+
+.disabledInput {
+  background-color: red;
+}
+
+.okButton {
+  background-color: red;
+}
+
+.commentImg {
+  width: 42px;
+  height: 36px;
+}
+
+.confirm {
+  display: flex;
+  color: #53595c;
+}
+
+.loginSuccess {
+  display: flex;
+  color: #14c61b;
+}
+
+.err {
+  color: var(--adm-color-danger);
+  font-size: 11.5px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.passcode {
+  --cell-size: 12.8vw;
+
+  :global(.adm-passcode-input-cell) {
+    font-size: 6.4vw;
+    color: #53595c;
+  }
+}
+
+.f13 {
+  font-size: 13.5px;
+}
+
+.f12 {
+  font-size: 12px;
+}
+
+.subLeft {
+  padding: 0 0 0 10px;
+}
+
+.subCenter {
+  position: relative;
+}
+
+.splitLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  color: #bfc3d3;
+}
+
+.subRight {
+  flex: 1;
+  height: 47px;
+  padding-left: 10px;
+  border-radius: 6px;
+}
+
+.subInputSuffix {
+  width: 17px;
+  height: 12px;
+  margin-right: 10px;
+}
+
+.submitBtn {
+  height: 50px;
+  font-size: 16px;
+}
+
+.firstPhonePrefix {
+  width: 15px;
+  height: 21px;
+}
+
+.firstPhoneSuffix {
+  width: 17px;
+  height: 12px;
+  margin-right: 10px;
+}
+
+.firstPhone {
+  height: 47px;
+  padding-left: 10px;
+  border-radius: 6px;
+}
+
+.entryTitle {
+  color: #fff;
+  font-size: 30px;
+}
+
+.passcodeWidth {
+  padding: 0.5rem;
+}
+
+.stepsWrapper {
+  position: relative;
+}
+
+.isPad {
+  height: 200px !important;
+  padding-top: calc(10px + env(safe-area-inset-top)) !important;
+}
+
+.isMobile {
+  padding-top: 50px !important;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://web-p2cdev.10fw.co.jp/url/faq.html -->
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>よくあるご質問</title>
+  <script>
+    function setRem() {
+      // 实际设备页面宽度和设计稿的比值
+      let scale = document.documentElement.clientWidth / 375;
+
+      // 计算实际的rem值并赋予给html的font-size
+      document.documentElement.style.fontSize = (16 * Math.min(scale, 1.5)) + 'px';
+    }
+
+    setRem();
+    window.addEventListener('resize', () => {
+      setRem();
+    });
+  </script>
+</head>
+
+<style>
+  .title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #2F5597;
+  }
+
+  .divider {
+    position: relative;
+    margin: 1.25rem 0 1.875rem 0;
+  }
+
+  .divider::after {
+    position: absolute;
+    top: 2.8125rem;
+    left: .625rem;
+    width: calc(100% - 1.25rem);
+    height: .25rem;
+    background-color: #d9e0ec;
+    content: '';
+  }
+
+  .content {
+    padding: 0 .625rem 1rem;
+  }
+
+  .question {
+    font-size: 0.9375rem;
+    color: #2F5597;
+  }
+
+  .answer {
+    font-size: 0.8125rem;
+    color: #676767;
+  }
+
+  .qa-extra {
+    font-size: 0.8125rem;
+    color: #676767;
+  }
+
+  .qa-extra:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .qa-extra div {
+    padding-left: 20px;
+  }
+</style>
+
+<body>
+<h2 class="title divider">
+  よくある質問
+</h2>
+
+<article class="content">
+  <p>
+    <span class="question">Q.アプリはパソコンからも動かせますか？</span>
+    <br>
+    <span class="answer">A.スマートフォンのみになります。</span>
+  </p>
+  <p>
+    <span class="question">Q.アプリの動作に必要な端末スペックを教えてください</span>
+    <br>
+    <span class="answer">A.iosまたはAndroidで、アプリがインストールできる端末であれば問題ございません。</span>
+  </p>
+  <p>
+    <span class="question">Qアプリはどこから入手できますか？</span>
+    <br>
+    <span class="answer">A.App StoreまたはGoogleストアからインストール可能です。</span>
+  </p>
+  <p>
+    <span class="question">Q.賃貸物件で入退去が起きた際はどうすればいいですか？</span>
+    <br>
+    <span class="answer">A.自動入退去機能があるため、前入居者のアカウントは自動停止されます。</span>
+  </p>
+  <p>
+    <span class="question">Q.サイレントモードにしても通知表示（バナー通知/ポップアップ通知）は行われますが、この通知表示を非表示にできませんか？</span>
+    <br>
+    <span class="answer">A.お使いのOSにより以下の設定でサイレントモードでの通知表示を非表示にできます。</span>
+  <div class="qa-extra">
+    <span>iOS</span>
+    <div>iOSの設定から、通知＞BrainMonを表示し</div>
+    <div>ロック画面、バナーをOFFにしてください。</div>
+  </div>
+  <div class="qa-extra">
+    <span>Android</span>
+    <div>Androidの設定から、BrainMonのアプリ情報を表示し</div>
+    <div>通知＞サイレントモード通知をOFFにしてください。</div>
+    <div>なおBrainMonのアプリ情報の表示方法はお使いの機種により異なります。</div>
+  </div>
+  </p>
+</article>
+</body>
+</html>
